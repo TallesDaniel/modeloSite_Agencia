@@ -1,0 +1,152 @@
+/*Configurando o Carousel*/
+.owl-carousel{
+    float: left;
+}
+
+/*Configurando várias classes*/
+.owl-carousel,
+/*Classe que forma criadas pelo PLUGIN no momento da DEPURAÇÃO do Navegador */
+.owl-stage-outer,
+.owl-stage,
+.owl-item,
+.owl-lazy{
+    height: 100%;
+    position: relative;
+}
+
+.owl-lazy{
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*Configurando as Setas*/
+.owl-prev,
+.owl-next{
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    padding: 20px 12px;
+    color: #fff;
+}
+
+.owl-prev:hover,
+.owl-next:hover{
+    background: #f47933;
+}
+
+.owl-prev{
+    border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+}
+.owl-next{
+    left: auto;
+    right: 0;
+    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+}
+
+/*Barras do Carousel*/
+.owl-dots{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    bottom: 15px;
+    text-align: center;
+}
+
+.owl-dots .owl-dot{
+    background: #fff;
+    display: inline-block;
+    width: 35px;
+    height: 10px;
+    margin: 4px;
+}
+.owl-dots .owl-dot.active{
+    background: #f47933;
+}
+
+/*Carousel Principal*/
+#carousel_principal{
+    height: calc(100% - 80px);
+}
+
+/*Configurando textos do carousel*/
+#carousel_principal .owl-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    background: rgba(244, 121, 51, .7);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#carousel_principal .owl-caption strong{
+    font-size: 1.5rem;
+}
+
+/* Carousel Testemunhas */
+#carousel_testemunhas .owl-prev,
+#carousel_testemunhas .owl-next{
+    padding: 5px 11px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+#carousel_testemunhas .owl-prev{ 
+    left: -50px;
+}
+#carousel_testemunhas .owl-next{
+    right: -50px;
+}
+#carousel_testemunhas .owl-dots{
+    position: relative;
+    top: 20px;
+}
+
+/* Carousel Portifolio */
+.carousel_portfolio{
+    height: 55vh;
+    max-height: 400px;
+    min-height: 300px;
+    margin-bottom: 30px;
+}
+
+.carousel_portfolio .owl-prev,
+.carousel_portfolio .owl-next{
+    text-align: center;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    transform: none;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    border-right: 3px solid #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.carousel_portfolio .owl-next{
+    left: 35px;
+}
+.carousel_portfolio .owl-caption{
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    font-size: 0.8125rem;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    bottom: 0;
+    left: 70px;
+    width: calc(100% - 70px);
+}

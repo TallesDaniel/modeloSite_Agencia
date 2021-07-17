@@ -1,0 +1,1242 @@
+/*=======================*/
+/*HEADER*/
+/*=======================*/
+
+.header{
+    height: 80px;
+    border-top: 6px solid #2c3e50;/*margin do topo*/
+}
+
+/* NAV-TOGGLE - configurações do botão responsivo (3 barras)*/
+#nav-toggle{
+    border-bottom-left-radius: 8px;/*arrendodamento do canto indicado*/
+    -webkit-border-bottom-left-radius: 8px;
+    position: fixed;
+    z-index: 15;
+    display: none;/*Esconder*/
+    background: #2c3e50;
+    padding: 15px;
+    top: 0;
+    right: 0;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+/*Configuração geral das 3 barras*/
+#nav-toggle span{
+    border-radius: 1px;/*arrendodamento do canto indicado*/
+    -webkit-border-radius: 1px;
+    height: 2px;
+    width: 30px;
+    display: block;/*transformando em barras*/
+    background: #fff;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+/*configurando margin só da segunda barra (á do meio)*/
+#nav-toggle span:nth-child(2){
+    margin: 6px 0;
+}
+/*configurando efeito de 'X' */
+#nav-toggle.active span:nth-child(1){
+   transform: rotate(45deg) translate3d(6px,6px,0);/*Rotação*/
+   -webkit-transform: rotate(45deg) translate3d(6px,6px,0);
+}
+#nav-toggle.active span:nth-child(2){
+   opacity: 0;
+}
+#nav-toggle.active span:nth-child(3){
+   transform: rotate(-45deg) translate3d(6px,-5px,0);/*Rotação*/
+   -webkit-transform: rotate(-45deg) translate3d(6px,-5px,0);
+}
+
+/*header logo*/
+ .header-logo{
+    width: 180px;
+    padding: 22px 0;
+    float: left;
+}
+/* header menu */
+.header-nav{
+    float: left;
+    padding: 25px 0;
+}
+
+.header-nav ul li{
+    display: inline-block;/*Todos ficam em linha*/
+    margin: 0 3px;
+    position: relative;
+}
+.header-nav ul li a{
+    color: #2c3e50;
+    text-transform: uppercase/*Maiusculas*/;
+    font-weight: 600;
+    font-size: 0.875rem;/*Valor em PX/16=Xrem*/
+}
+.header-nav ul li a:hover{
+    color: #f47933;
+}
+.header-nav ul li a.active{
+    color: #f47933;
+}
+
+/*configurações Pesquisar */
+.header-search{
+    position: relative;
+    float: right;/*Jogando para Direita*/
+    margin: 18px 0;/* Ajustando pesquisar */
+}
+/*Placeholder Pesquisar = Navegaodores*/
+.header-search input::-webkit-input-placeholder{
+    /*Chrome...Safari...Opera*/
+    color: #fff;
+}
+.header-search input:-moz-placeholder{
+    /*Firefox 4 to 18*/
+    color: #fff;
+    opacity: 1;
+}
+.header-search input::-moz-placeholder{
+    /*Safari 19+*/
+    color: #fff;
+    opacity: 1;
+}
+.header-search input:-ms-input-placeholder{
+    /* EI 10+ */
+    color: #fff;
+}
+.header-search input::-ms-input-placeholder{
+    /* Microsoft Edge*/
+    color: #fff;
+}
+.header-search input::placeholder{
+    /* Browsers Modernos*/
+    color: #fff;
+}
+.header-search input{
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    background: #01c0b5;
+    padding: 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.header-search button{
+    position: absolute;/*ficar em posição flutuante*/
+    top: 50%;
+    right: 8px;
+    color: #fff;
+    font-size: 1.5rem;
+    background: transparent;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+/* Redes Sociais - header */
+.header-redes{
+    text-align: center;
+    margin: 20px 0;/*20px cima e baixo....0 dos lados*/
+    display: none;
+}
+.header-redes a{
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+/*============================*/
+/*AGENCIA*/
+/*============================*/
+.agencia{
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+.agencia-title{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.375rem;/*22px/16px=1.375rem*/
+}
+.agencia-title strong{
+    color: #01c0b5;
+    font-size: 1.875rem;/*30px/16px=1.375rem*/
+}
+
+.agencia-item{
+    margin-top: 30px;
+    padding: 15px 0;/*Alteração Própria Minha de Talles Daniel*/
+    text-align: center;
+}
+.agencia-item-icon{
+    background: #01c0b5;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    font-size: 6rem;/*96px/16px=6rem*/
+    position: relative;
+}
+.agencia-item-icon:before{/*seta*/
+    content: "";
+    position: absolute;/*Quando se usa  ABSOLUTE e necessário usar o RELATIVE no principal*/
+    top: 100%;
+    left: 50%;
+    margin-left: -22px;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 22px solid #01c0b5;
+}
+.agencia-item h2{
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;/*32px/16px=2rem*/
+    margin: 25px 0 5px 0;/*cima(top),right(direita),bottom(baixo),left(esquerda)*/
+    text-transform: uppercase;
+}
+
+/*============================*/
+/*CURIOSIDADES*/
+/*============================*/
+.curiosidades{
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+    background-image: url(../images/agencia-curiosidades-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.curiosidades p{
+   font-size: 1.875rem;/*30px/16px*/
+   font-weight: 700;/*gordura da fonte*/
+}
+.curiosidades ul{
+   font-family: 'Oswald', sans-serif;
+   font-size: 1.25rem;/*20px/16px*/
+   font-weight: 400;/*gordura da fonte*/
+   margin-top: 20px;
+}
+.curiosidades ul span{
+   font-family: 'Oswald', sans-serif;
+   font-size: 3.75rem;/*60px/16px*/
+   color: #01c0b5;
+   display: block;/*100% do bloco*/
+}
+
+/*============================*/
+/*EQUIPE*/
+/*===========================*/
+/* Modal */
+.dialog-equipe-photo{
+    height: 226px;
+    overflow: hidden;
+    text-align: center;
+}
+.dialog-equipe-photo img{ /*Ajusta imagem no bloco dela mesma -> corta imagem*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.dialog-equipe-redes{
+    text-align: center;
+    /* margin-bottom: 20px; */
+    margin: 10px 0 20px 0; /*Configuração propria*/
+}
+.dialog-equipe-redes a{
+    color: #2c3e50;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+.dialog-equipe-redes a:hover{
+    color: #f47933;
+}
+.dialog-equipe-habilidades span{
+    float: right;
+}
+.dialog-equipe-habilidades li{
+    margin-bottom: 10px;
+}
+.dialog-equipe-habilidades li div{ /*Barras cinzas de Habilidades*/
+    background: #eee;
+    height: 13px;
+    position: relative;
+}
+.dialog-equipe-habilidades li div span{ /*Barras Verde de Habilidades*/
+    background: #01c0b5;
+    height: 100%;
+    position: absolute;
+    width: 1%;/*Padrão caso não declare no HTML*/
+}
+
+
+
+/* Conteudo */
+.equipe{
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+.equipe-list{
+   text-align: center;
+   font-size: 0;
+}
+.equipe-list li{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    background: #fff;
+    width: 100%;
+    max-width: 322px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+/* equipe-foto */
+.equipe-foto{
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.equipe-foto img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.equipe-foto-hover{
+    z-index: 1;
+    position: absolute;
+    background: rgba(45, 63, 81, 0.85);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    /*Configurações para o Hover da Lista EQUIPE*/
+    opacity: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    transform: scale(.4) rotate(400deg);
+    -webkit-transform: scale(.4) rotate(400deg);
+}
+.equipe-foto-hover div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.equipe-foto-hover span{
+    color: #fff;
+    font-size: 1.125rem;
+    position: relative;
+}
+.equipe-foto-hover span:before,
+.equipe-foto-hover span:after{
+    content: "";/*Estou criando elemento*/
+    background: #fff;
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    top: 50%;
+}
+.equipe-foto-hover span:before{
+    /*Barrinha 01 Esquerda*/
+    left: -50px;/*Posição baseada na largura WIDTH DE 40PX mais 10px*/
+}
+.equipe-foto-hover span:after{
+    /*Barrinha 02 Direita*/
+    right: -50px;/*Posição baseada na largura WIDTH DE 40PX mais 10px*/
+}
+
+
+.equipe-foto-hover a{
+    color: #fff;
+    font-size: 0.875rem;
+    background: #f47933;
+    padding: 3px 10px;
+    position: relative;
+    top: 5px;
+}
+.equipe-foto-hover a:hover{
+    background: #ca5818;
+}
+
+/* equipe-title */
+.equipe-title{
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+}
+.equipe-title:before{
+    position: absolute;
+    content: "";
+    background: #f47933;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+}
+.equipe-title strong{
+    font-size: 1.125rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* equipe Hover */
+.equipe-list li:hover .equipe-foto-hover{
+    opacity: 1;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(1) rotate(0deg);
+}
+.equipe-list li:hover .equipe-title:before{
+    top: 0;
+}
+.equipe-list li:hover .equipe-title{
+    color: #fff;
+}
+
+/*============================*/
+
+/*=========SERVIÇOS===========*/
+.servicos{
+    padding: 50px 0;
+    background-image: url(../images/servicos-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.servicos-item{
+    /* overflow: hidden;===Arredonda cantos Com Cor */
+    padding: 0;/*ATENÇÃO - SUA AUTORIA TALLES DANIEL*/
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, .3);
+}
+.servicos-item:not(:first-child){
+    /*Vai aplicar  em todos, menos no primeiro item*/
+    margin-top: 30px;
+}
+.servicos-item header{
+    padding: 15px;
+}
+.servicos-item header i{
+    font-size: 3rem;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;/*Centralizando objeto*/
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.servicos-item header h2{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+
+}
+.servicos-item p{
+    font-size: 0.875rem;
+    margin-top: 10px;
+
+}
+.servicos-item p strong{
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.servicos-item ul li{
+    font-size: 1.125rem;
+    border-bottom: 2px dotted #ccc; /*Borda pontilhada*/
+    padding: 5px 0;
+}
+.servicos-item a{
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/* Colocando hover - tipo dificil */
+/* .servicos-item.design a:hover,
+.servicos-item.estrategia a:hover,
+.servicos-item.digital a:hover,
+.servicos-item.marketing a:hover{
+    background: #f47933;
+} */
+
+/* design */
+.servicos-item.design header,
+.servicos-item.design a{
+    background: #e04646;
+}
+.servicos-item.design header i{
+    color: #e04646;
+}
+/* estrátegia */
+.servicos-item.estrategia header,
+.servicos-item.estrategia a{
+    background: #0091cd;
+}
+.servicos-item.estrategia header i{
+    color: #0091cd;
+}
+/* digital */
+.servicos-item.digital header,
+.servicos-item.digital a{
+    background: #00ad45;
+}
+.servicos-item.digital header i{
+    color: #00ad45;
+}
+/* marketing */
+.servicos-item.marketing header,
+.servicos-item.marketing a{
+    background: #eebb00;
+}
+.servicos-item.marketing header i{
+    color: #eebb00;
+}
+/*Hover - tipo fácil*/
+.servicos-item a:hover{
+    background: #f47933;
+}
+/*============================*/
+/*Start Testemunhas===================*/
+.testemunhas{
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+.testemunhas-photo{
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.testemunhas-info{
+    float: right;
+    width: calc(100% - 70px);
+}
+.testemunhas-info header{
+   float: left;
+   width: 100%;
+   margin-bottom: 10px;
+}
+.testemunhas-info header h2{
+    line-height: 1;
+    font-size: 1.2rem;
+    max-width: 92%;
+    float: left;
+}
+.testemunhas-info header h2 span{
+    font-size: 1rem;
+    color: #999;
+    font-weight: 400;
+    display: block;
+}
+.testemunhas-info header i{
+    font-size: 1rem;
+    color: #999;
+    float: right;
+    top: 3px;
+    position: relative;
+}
+/*End Testemunhas=====================*/
+/*PORTIFOLIO============================*/
+.portifolio-nav{
+    text-align: center;
+    margin: 10px 0;
+}
+.portifolio-nav li{
+    display: inline-block;
+    margin: 0 5px 10px 5px;
+}
+.portifolio-nav li a{
+    color: #2c3e50;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    display: block;
+    padding: 2px 10px;
+    border: 2px solid #2c3e50;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.portifolio-nav li a:hover{
+    color: #f47933;
+    border: 2px solid #f47933;
+}
+.portifolio-nav li a.active{
+    color: #f47933;
+    border: 2px solid #f47933;
+}
+
+.portifolio{
+    float: left;
+    width: 100%;
+    /*width: calc(100%/5); Alinhando os blocos em 5 em cada linha*/
+    /*width: 20%; Alteração Própria, era 25%* mas o que funcionou foi o 20%*/
+    position: relative;
+    display: none;
+}
+.portifolio.visible{
+    display: block;
+    animation: animaPortifolio .7s ease;
+    -webkit-animation: animaPortifolio .7s ease; 
+}
+/* Configurando Animação */
+@keyframes animaPortifolio{
+    0%{
+        transform: scale(.5);
+        -webkit-transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+.portifolio img{
+    display: block;/*Grudando as imagens*/
+}
+.portifolio-hover{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 63, 81, .9);
+    color: #fff;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, .5);
+}
+.portifolio-hover > div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+.portifolio-hover strong{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.portifolio-hover label{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.portifolio-hover a{
+    font-size: 4rem;
+    color: #fff;
+    line-height: 1;
+}
+.portifolio-hover a:hover{
+    color: #f47933;
+}
+.portifolio-hover a i{
+    line-height: 1;
+}
+/* Hover */
+.portifolio:hover .portifolio-hover{
+    opacity: 1;
+}
+/* Clientes
+====================================== */
+.clientes{
+    background: #f5f5f5;
+    padding: 50px;
+    text-align: center; 
+}
+.clientes p{
+    font-size: 1.875rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.clientes ul li{
+    font-size: 5rem;
+    background: #fff;
+    padding: 5px 20px;
+    margin-top: 20px;
+    line-height: 1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+/* ================================== */
+/* BLOG
+===================================== */
+.blog{
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+.blog .content{/*Ajustando o tamanhos de blocos igualmente*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog-item{
+    background: #333;
+    color: #fff;
+    margin-bottom:  30px;
+}
+.blog-item:last-child{
+    margin-bottom:  0;/*Zerar apenas no Ultimo Bloco*/
+}
+.blog-item-thumb{
+    position: relative;
+}
+.blog-item-thumb img{
+    display: block;
+}
+.blog-item-thumb span{
+    position: absolute;
+    right: 10px;
+    padding: 3px 10px;
+    font-size: 0.6875rem;
+}
+.blog-item-thumb span:first-child{/*Primeira*/
+    color: #01c0b5;
+    background: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+}
+.blog-item-thumb span:nth-child(2){/*Ultima*/
+    color: #fff;
+    background: #01c0b5;
+    top: 100%;
+}
+.blog-item h2{
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    max-width: 88%;
+}
+.blog-item p{
+    font-size: 0.875rem;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.blog-item .blog-link{
+    font-size: 0.875rem;
+    text-align: right;
+}
+.blog-item .blog-link a{
+    color: #f47933;
+    font-weight: 700;
+}
+.blog-item .blog-link a:hover{
+    text-decoration: underline;
+}
+/* ================================== */
+/* CONTATO 1
+====================================== */
+.contato-infos .content,
+.contato-form .content{
+    max-width: 800px;
+}
+.contato-infos{
+    background: url(../images/contato-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    padding: 10% 0;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.contato-infos span{
+    background: rgba(255, 255, 255, .7);
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    margin: 5px auto 0 auto;
+}
+/* CONTATO 2
+====================================== */
+.contato-form p{
+    text-align: center;
+    margin:  50px 0 20px 0;
+    font-size: 5rem;
+}
+.contato-form label{
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contato-form label input,
+.contato-form label textarea{
+    float: left;
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    color: #2c3e50;
+    padding: 5px;
+    margin-top: 5px;
+    border: 2px solid #eee;
+}
+.contato-form label input[type="checkbox"]{
+    height: auto;  
+    width: auto;  
+    margin-right: 5px;
+}
+.contato-form label textarea{
+    height: 143px;    
+}
+.contato-form label:nth-child(3) span{
+    width: 90%;
+    display: inline-block;   
+}
+.contato-form button{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background: #f47933;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+.contato-form button i{
+    line-height: 1;
+    margin-top: 2px;
+}
+/* ================================== */
+/*FOOTER
+===================================== */
+.footer{
+   background: #2c3e50;
+   padding: 20px 0;
+   margin-top: 30px;
+   color: #fff; 
+}
+.footer .content{
+    max-width: 800px;
+}
+.footer-col{
+    text-align: center;
+    margin-top: 10px;
+}
+.footer-redes a{
+    color: #fff;
+    font-size: 2rem;
+    margin:  0 10px;
+    line-height: 1;
+}
+/* ================================== */
+
+
+
+/*OFICIAL TAMANHOS DE RESPONSIVE*/
+/*BREAKPOINTS
+/*======================================*/
+/*MAX WIDTH - Maximo*/
+/*Só funcionará enquanto o tamanho maximo da tela for o valor indicado*/
+@media (max-width: 959.9px){
+   /*Tudo que ficará ativado enquanto estiver menor que que o valor em px indicado*/
+
+   /*Bloco das 3 barras....Ativando partes pra Mobile*/
+   #nav-toggle, .header-redes{
+       display: block;
+   }
+   
+   /* header */
+   .header{
+       height: 58px;
+   }
+
+   /* Carousel Principal */
+   #carousel_principal{
+       /*Retirar px*/
+       height: calc(100% - 58px);
+   }
+
+   /*header logo*/
+   .header-logo{
+       max-width: 180px;
+       width: 60%;
+       padding: 12px 0;
+   }
+
+   /*MENU - exibirá só quando for menor que 960px*/
+   .header-collapse{
+    overflow: auto;/*Deixar Scroll(Rolando)*/
+    position: fixed;
+    background: rgba(45, 63, 81, .95);
+    width: 100%;
+    height: 100%;
+    z-index: 10;/*eixo z*/
+    padding: 15px;
+    top: -100%;
+    left: 0;
+    transition: top .4s ease;
+    -webkit-transition: top .4s ease;
+   }
+   /*Escondendo Menu*/
+   .header-collapse.active{
+       top: 0%;
+   }
+
+   /*Links titulos*/
+   .header-nav{
+       padding: 25px 0;
+       float: none;
+   }
+
+   .header-nav ul li{
+       width: 100%;
+       text-align: center;
+       padding: 5px 0;
+   }
+   .header-nav ul li a{
+       color: #fff;
+       font-size: 1.4rem;/* valor é igual a 22px (22px/16px=1.375rem)*/
+   }
+
+   /*Pesquisar*/
+   .header-search{
+        max-width: 300px;/*tamanho maximo*/
+        /* se fosse definido: 
+        width: 100%;
+        vai ocupar 100% do espaço enquanto for menor que 300px
+        */
+        margin: 0 auto;
+        float: none;
+    }
+    .header-search input{
+        padding: 15px;
+    }
+}
+
+/*=========MIN-WIDHT=====================================*/
+@media (min-width: 480px){
+/*Curiosidades*/
+    /*dividindo bloco em 2x2*/
+    .curiosidades ul li{
+        float: left;
+        width: 50%;
+     }
+
+     /* Testemunhas */
+     .testemunhas-photo{
+        width: 100px;
+        height: 100px;
+    }
+    .testemunhas-info{
+        width: calc(100% - 120px);
+    }
+    /* Clientes */
+    .clientes ul li{
+        float: left;
+        width: 48%;
+        margin: 4% 4% 0 0;
+    }
+    .clientes ul li:nth-of-type(2n+0){
+        margin-right: 0;
+    }
+    
+    /* Contato */
+    .contato-infos span{
+        width: 80%;
+    }
+}
+/*MIN-WIDHT*/
+@media (min-width: 667px){
+    /* Equipe */
+    .equipe-list li{
+        width: 50%;
+    }
+    .equipe-list li:nth-of-type(2n+0){
+        border-left: 0;
+    }
+
+    /* Serviços */
+    .servicos-item:not(:first-child),
+    .servicos-item{
+        width: calc((100% - 4%) / 2);/*Ajustando blocos lado a lado, em dois*/
+        float: left;
+        margin: 0 4% 0 0;
+    }
+    .servicos-item:nth-of-type(2n+0){
+        margin-right: 0;
+    }
+    .servicos-item:nth-of-type(1n+3){
+        margin-top: 4%;
+    }
+
+    /* Portifolio */
+    .portifolio{
+        width: calc(100% / 2);
+    }
+
+    /* Blog */
+    .blog-item{
+        width: 48%;
+        margin: 0;
+    }
+    .blog-item:nth-of-type(1n+3){
+        margin-top: 4%;
+    }
+}
+/*MIN-WIDHT*/
+@media (min-width: 768px){
+    /* Dialog - MOdal  */
+    .dialog-body{
+        padding: 0 20px; /*Espaçamento entre conteudo e barra de rolagem*/
+    }
+    .dialog-equipe .dialog-cols{/*Dividindo as Colunas em 2*/
+        float: left;
+        width: 40%;
+    }
+    .dialog-equipe .dialog-cols:last-child{
+        float: right;
+        width: 56%;
+    }
+
+    /*Carousel Principal*/
+    #carousel_principal .owl-caption{
+        padding: 30px;
+        font-size: 1.6rem;
+    }
+
+    #carousel_principal .owl-caption strong{
+        font-size: 2.5rem;
+    }
+
+    /* Agencia */
+    .agencia-item{
+        float: left;
+        width: calc((100% - 4%) / 2);
+        margin-right: 4%;
+    }
+    .agencia-item:nth-of-type(2n+0){
+        margin-right: 0;
+    }
+
+    /* Curiosidades */
+    .curiosidades ul li{
+        width: 25%;
+     }
+     /* Clientes */
+     .clientes ul li:nth-of-type(2n+0),
+    .clientes ul li{
+        width: calc((100% - 6%) / 3);
+        margin: 3% 3% 0 0;
+    }
+    .clientes ul li:nth-of-type(3n+0){
+        margin-right: 0;
+    }
+    /* Contato */
+    .contato-infos{
+        font-size: 2rem;
+    }
+    .contato-infos span{
+        width: 500px;
+        font-size: 3.5rem;
+    }
+    .contato-form form div{
+        float: left;
+        width: 48%;
+    }
+    .contato-form form div:last-child{
+        float: right;
+    }
+
+    /* footer */
+    .footer-col{
+        margin: 0;
+        width: calc(100% / 3);
+        float: left;
+    }
+    .footer-col:first-child{
+        text-align: left;
+    }
+    .footer-col:last-child{
+        text-align: right;
+        padding-top: 5px;
+    }
+    .footer-redes a{
+        margin: 0;
+    }
+    .footer-redes a:not(:first-child){
+        margin-left: 20px;
+    }
+}
+
+/*BREAKPOINTS
+/*======================================*/
+/*MIN WIDTH - Minimo*/
+/*Só funcionará quando o tamanho minimo da tela for o valor indicado*/
+@media (min-width: 960px){
+    /* Dialog Modal */
+    .dialog-portfolio .dialog-cols{/*Dividindo as Colunas em 2*/
+        float: left;
+        width: 68%;
+    }
+    .dialog-portfolio .dialog-cols:last-child{
+        float: right;
+        width: 30%;
+    }
+
+    /*header*/
+    @keyframes animaHeader{
+        0%{
+            opacity: 0;
+            transform: translateY(-100%);
+            -webkit-transform: translateY(-100%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+            -webkit-transform: translateY(0%);
+        }
+    }
+    .fixed{
+        position: fixed;
+        background: #fff;
+        z-index: 20;
+        animation: animaHeader .7s ease-in-out .4s backwards;
+        -webkit-animation: animaHeader .7s ease-in-out .4s backwards;
+    }
+    .header-nav{
+        margin-left: 2%;/*Mantém sempre o tamanho quando é %*/
+    }
+    /*Criando a barra animada*/
+    .header-nav ul li a.active:before{
+        /*Before = Criar elemento*/
+        background: #f47933;
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        top: -31px;
+        left: 0;
+    }
+
+     /* Agencia */
+     .agencia-item:nth-of-type(2n+0),
+      .agencia-item{
+        width: calc((100% - 8%) / 3);
+        margin-right: 4%;
+    }
+    .agencia-item:nth-of-type(3n+0){
+        margin-right: 0;
+    }
+
+    /* Equipe */
+    .equipe-list li:nth-of-type(2n+0),
+    .equipe-list li{
+        width: 25%;
+    }
+    /*Modo de Fazer 01 - tirar bordas*/
+    /* .equipe-list li:not(:first-child):nth-of-type(1n+0){
+        border-left:0;
+    }
+    */
+    /*Modo de Fazer 02 - tirar bordas*/
+    .equipe-list li:not(:first-child){
+        border-left:0;
+    }
+
+    /* Portifolio */
+    .portifolio{
+        width: calc(100% / 3);
+    }
+}
+
+/*BREAKPOINTS
+/*======================================*/
+/*MIN WIDTH - Minimo*/
+/*Só funcionará quando o tamanho minimo da tela for o valor indicado*/
+@media (min-width: 1024px){
+    /* header */
+    .header-nav ul li{
+        margin: 0 6px;
+    }
+}
+
+@media (min-width: 1144px){
+    /* header */
+    .header-logo{
+        width: auto;
+    }
+    .header-nav ul li a{
+        font-size: 1rem;
+    }
+     /* Clientes */
+     .clientes ul li:nth-of-type(2n+0),
+     .clientes ul li:nth-of-type(3n+0),
+    .clientes ul li{
+        width: calc((100% - 15%) / 6);
+        margin: 3% 3% 0 0;
+    }
+    .clientes ul li:nth-of-type(6n+0){
+        margin-right: 0;
+    }
+    /* Blog */
+    .blog-item:nth-of-type(1n+3),
+    .blog-item{
+        width: calc((100% - 9%) / 4);
+        margin: 0;
+    }
+}
+
+@media (min-width: 1280px){
+    /* header */
+    .header-nav ul li{
+        margin: 0 8px;
+    }
+    .header-search{
+        width: 260px;
+    }
+
+    /* Serviços */
+    .servicos-item:nth-of-type(2n+0),
+    .servicos-item:nth-of-type(1n+3),
+    .servicos-item{
+        width: calc((100% - 9%) / 4);/*Ajustando blocos lado a lado, em dois*/
+        margin: 0 3% 0 0;
+    }
+    /* Modos de zerar espaçamento do último bloco */
+    /* .servicos-item:nth-of-type(4n+0){
+        margin-right: 0;
+    } */
+    .servicos-item:last-child{/*Vai se aplicar só no útimo bloco*/
+        margin-right: 0;
+    }
+
+    /* Portifolio */
+    .portifolio{
+        width: calc(100% / 4);
+    }
+}
+
+@media (min-width: 1366px){
+    /* Portifolio */
+    .portifolio{
+        width: calc(100% / 5);
+    }
+}
+
